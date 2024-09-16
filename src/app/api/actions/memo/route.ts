@@ -74,6 +74,12 @@ export const POST = async (req: Request) => {
     const payload: ActionPostResponse = await createPostResponse({
       fields: {
         transaction,
+        links: {
+          next: {
+            type: "post",
+            href: new URL("/api/actions/success", req.url).toString(),
+          },
+        },
       },
     });
 
