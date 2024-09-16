@@ -3,7 +3,6 @@ import {
   ActionPostRequest,
   ActionPostResponse,
   ACTIONS_CORS_HEADERS,
-  createActionHeaders,
   createPostResponse,
   MEMO_PROGRAM_ID,
 } from "@solana/actions";
@@ -16,7 +15,6 @@ import {
   TransactionInstruction,
 } from "@solana/web3.js";
 
-const headers = createActionHeaders();
 
 export const GET = (req: Request) => {
   const payload: ActionGetResponse = {
