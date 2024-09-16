@@ -77,7 +77,7 @@ export const POST = async (req: Request) => {
         links: {
           next: {
             type: "post",
-            href: new URL("/api/actions/success", req.url).toString(),
+            href: "/api/actions/success",
           },
         },
       },
