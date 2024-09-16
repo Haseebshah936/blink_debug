@@ -1,8 +1,7 @@
-import { ACTIONS_CORS_HEADERS } from "@solana/actions";
-import { Action } from "@solana/actions-spec";
+import { ActionGetResponse, ACTIONS_CORS_HEADERS } from "@solana/actions";
 
 export const GET = async (req: Request) => {
-  const payload: Action<"completed"> = {
+  const payload: ActionGetResponse = {
     icon: new URL(
       "/images/site/success.jpg",
       new URL(req.url).origin
@@ -10,7 +9,7 @@ export const GET = async (req: Request) => {
     label: "✅ Success",
     description: "This is a success action",
     title: "Success",
-    type: "completed",
+    type: "action",
   };
 
   return Response.json(payload, {
